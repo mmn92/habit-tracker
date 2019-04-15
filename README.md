@@ -1,3 +1,9 @@
+## Habit tracker
+
+An application to help keep track of your habits in a weekly basis
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
