@@ -38,4 +38,7 @@ export const CheckedSquare = styled.button`
     background-color: var(--color-green-progress);
     border: solid green 1px;
     border-radius: 2px;
+    :hover {
+        background-color: var(--color-green-progress-hover);
+    }
 `;

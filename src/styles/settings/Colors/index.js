@@ -8,6 +8,7 @@ const Colors = createGlobalStyle`
         --color-positive-dark: #818D92;
         --color-zero: #FFFFFF;
         --color-green-progress: #AAFFAA;
+        --color-green-progress-hover: #DDFFDD;
     }
 `;
 

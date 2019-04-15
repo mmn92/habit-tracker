@@ -9,7 +9,7 @@ const Base = createGlobalStyle`
     button {
         font-family: 'Quicksand', sans-serif;
         height: 35px;
-        width: 80px;
+        min-width: 80px;
         background-color: var(--color-positive);
         border: none;
         margin: 5px;
@@ -18,6 +18,11 @@ const Base = createGlobalStyle`
         background: #AAAAAA;
         cursor: pointer;
         border: 1px solid #555555;
+    }
+    hr {
+        width: 50%;
+        margin 30px auto;
+        color: var(--color-positive-dark);
     }
     input {
         background-color: var(--color-negative-dark);
