@@ -112,14 +112,19 @@ class App extends React.Component {
 const defaultProgress = [false, false, false, false, false, false, false];
 
 const defaultHabits = [{
-  name: "Habit1",
-  description: "This is my first habit",
+  name: "Eating healthy",
+  description: "Eat vegetables everyday at lunch.",
   progress: [true, false, false, false, true, true, false]
 },
 {
-  name: "Habit2",
-  description: "This is my second habit",
+  name: "Drink enough water",
+  description: "Drink at least 2L of water everyday",
   progress: [false, false, true, false, true, true, false]
+},
+{
+  name: "Exercise!",
+  description: "Practice 30min of exercise each day",
+  progress: [false, true, true, false, true, false, false]
 }
 ]
 
