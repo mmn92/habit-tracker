@@ -16,6 +16,6 @@ export const UncheckedSquare = styled.button`
 export const CheckedSquare = styled.button`
     height: 35px;
     width: 35px;
-    background: #00FF00;
+    background-color: var(--color-green-progress);
     border: solid green 1px;
 `;

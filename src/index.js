@@ -4,9 +4,13 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import Reset from './styles/generic/Reset';
+import Base from './styles/Base';
+import Colors from './styles/settings/Colors';
 
 ReactDOM.render(<Fragment>
+                    <Colors />
                     <Reset />
+                    <Base />
                     <App />
                 </Fragment>, document.getElementById('root'));
 
