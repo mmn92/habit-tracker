@@ -11,7 +11,7 @@ export const Details = (props) => {
             <Title>{props.habits[id].name}</Title>
             <Description>{props.habits[id].description || "No description"}</Description>
             <div id="progress">
-                {props.habits[id].progress.map((day, index) => day ? <CheckedSquare id={index} /> : <UncheckedSquare id={index} />)}
+                {props.habits[id].progress.map((day, index) => day ? <CheckedSquare id={index} name={id} onClick={props.handleClick} /> : <UncheckedSquare id={index} name={id} onClick={props.handleClick} />)}
             </div>
         </HabitDetails>
     )

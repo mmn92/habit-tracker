@@ -22,8 +22,10 @@ class App extends React.Component {
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
+  // This function is responsible for the controled form text fields
   handleInputChange(event) {
     const target = event.target;
     const value = target.value;
@@ -34,6 +36,7 @@ class App extends React.Component {
     });
   }
 
+  // This function is responsible for the submission of the new habit
   handleSubmit(event) {
     const target = event.target;
     const name = target.name;
@@ -59,6 +62,7 @@ class App extends React.Component {
     });
   }
 
+  // This is the function that hadles the deletion of the habits
   handleDelete(event) {
     const target = event.target;
     const name = parseInt(target.name,10);
@@ -66,6 +70,23 @@ class App extends React.Component {
     
     this.setState({
       habits
+    });
+  }
+
+  // This function handles the clicks in the weekly progress boxes
+  handleClick(event) {
+    const target = event.target;
+    // The name parameter holds the habit position in the state array
+    const position = parseInt(target.name, 10);
+    // The id parameter holds the day of the week for the progress array
+    const progressDay = parseInt(target.id, 10);
+    let currentHabits = this.state.habits.concat();
+    let newHabit = this.state.habits[position];
+    newHabit.progress[progressDay] = newHabit.progress[progressDay] ? false : true;
+    currentHabits[position] = newHabit;
+
+    this.setState({
+      habits: currentHabits
     });
   }
 
@@ -77,7 +98,7 @@ class App extends React.Component {
           <Main>
             <Switch>
               <Route path="/" render={(props) => <HabitsContainer habits={this.state.habits} handleDelete={this.handleDelete} />} exact />
-              <Route path="/details/:id" render={props => <Details {...props} habits={this.state.habits} />} />
+              <Route path="/details/:id" render={props => <Details {...props} habits={this.state.habits} handleClick={this.handleClick} />} />
               <Route path="/new" render={props => <New {...props} name={this.state.formName} description={this.state.formDesc} handleInputChange={this.handleInputChange} handleSubmit={this.handleSubmit} />} />
             </Switch>
           </Main>
