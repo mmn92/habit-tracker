@@ -10,9 +10,35 @@ const Base = createGlobalStyle`
         font-family: 'Quicksand', sans-serif;
         height: 35px;
         width: 80px;
-        background-color: #CCCCCC;
+        background-color: var(--color-positive);
         border: none;
         margin: 5px;
+    }
+    button:hover {
+        background: #AAAAAA;
+        cursor: pointer;
+        border: 1px solid #555555;
+    }
+    input {
+        background-color: var(--color-negative-dark);
+        font-family: 'Quicksand', sans-seriff;
+        height: 20px;
+        width: 280px;
+        padding: 5px;
+        margin: 10px;
+        border: 1px solid #a0a0a0;
+        border-radius: 2px;
+        color: var(--color-positive);
+    }
+    textarea {
+        background-color: var(--color-negative-dark);
+        font-family: 'Quicksand', sans-seriff;
+        border: 1px solid #a0a0a0;
+        border-radius: 2px;
+        color: var(--color-positive);
+        margin-left: 10px;
+        min-width: 290px;
+        min-height: 100px;
     }
 `;
 
